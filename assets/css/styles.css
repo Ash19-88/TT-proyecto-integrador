@@ -41,8 +41,19 @@ nav ul {
   list-style-type: none;
   padding: 0;
   display: flex;
-  margin: 0;
+  margin: auto;
   align-items: center;
+}
+.navbar-toggler {
+  z-index: 1050; /* Mayor que el z-index del carousel para prevenor efecto indeseado*/
+  box-shadow: none;
+  border: #f3e8d5 1px solid;
+}
+.navbar-toggler:focus {
+  box-shadow: 0 0 0 1px rgba(250, 249, 248, 0.466);
+}
+.navbar-toggler-icon {
+  font-size: medium;
 }
 
 nav ul li {
@@ -273,7 +284,7 @@ a {
   display: flex;
   flex-direction: column;
   gap: 15px;
-  width: 50%;
+  width: 60%;
   margin: auto;
 }
 
@@ -437,9 +448,16 @@ a {
     max-height: 150px;
     background-color: transparent;
   }
+  #cart {
+    width: 100%;
+    padding: 20px 8px;
+  }
   .description {
     width: 100%;
     font-size: small;
+  }
+  .cart-summary {
+    width: 75%;
   }
   .card-review {
     gap: 18px;
@@ -451,5 +469,35 @@ a {
   .map-title,
   .map-container {
     display: none;
+  }
+}
+
+@media (max-width: 540px) {
+  #cart {
+    width: 100%;
+    padding: 10px 5px;
+  }
+  .cart-summary {
+    width: 80%;
+  }
+  .table .form-control {
+    width: 40px;
+    margin: 0 auto;
+  }
+  .table {
+    font-size: x-small;
+    margin: auto;
+  }
+  .description {
+    display: none;
+  }
+
+  nav {
+    font-size: medium;
+  }
+}
+@media (max-width: 370px) {
+  .cart-summary {
+    width: 100%;
   }
 }
